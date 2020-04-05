@@ -1,0 +1,166 @@
+xhtml, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color:#01284a;
+  padding: 8px;
+}
+
+#start {
+  position: relative;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+#code-input {
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+}
+
+button {
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+#start-button {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+#start-button:not(:disabled) {
+  background-color: #000f1c;
+}
+
+#start-button:disabled {
+  cursor: not-allowed ;
+  background-color: #7691a8;
+}
+
+video {
+  width: 100%;
+}
+
+#chat-room {
+  display: grid;
+  grid-gap: 16px;
+  width: 100%;
+  grid-template-columns: 1fr 3fr;
+}
+
+#remote-view-container{
+  position: relative;
+  grid-column: 2;
+  background-color: black;
+  height: 95vh;
+}
+
+#self-view {
+  grid-column: 1;
+  background-color: black;
+}
+
+#remote-view {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#view-buttons {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  position: absolute;
+  border-radius: 3px;
+  background-color: darkgray;
+  bottom: 10px;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  text-align: center;
+}
+
+#view-buttons:hover {
+  opacity: 0.7;
+}
+
+.view-button {
+  background-color: darkgray;
+  border-color: darkgray;
+  border-radius: 3px;
+  font-size: 20px;
+  color: white;
+  padding: 5px;
+}
+
+.view-button:hover {
+  cursor: pointer;
+  background-color: #757272;
+}
+
+#select-file-dialog {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color:rgba(255,255,255,0.5);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#dialog-content {
+  position: absolute;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+#label {
+  margin-bottom: 5px;
+}
+
+#dialog-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgba(0,0,0,0.4);
+  padding: 10px;
+}
+
+#ok-button {
+  margin-left: 10px;
+  background-color: #01284a;
+  color: white;
+  float: right;
+}
+
+#ok-button:disabled {
+  cursor: not-allowed ;
+  background-color: #7691a8;
+}
+
+#cancel-button {
+  float: right;
+}

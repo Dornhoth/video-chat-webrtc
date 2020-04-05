@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>VideoChat</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+</head>
+
+<body>
+  <div id="chat-room" style="display: none;">
+    <video id="self-view" autoplay></video>
+    <div id="remote-view-container">
+      <video id="remote-view" autoplay></video>
+      <div id="view-buttons">
+        <button class="view-button" id="share-button"><i id="share-button-icon" class="fas fa-eye"></i></button>
+        <button class="view-button" style="display: none" id="stop-share-button"><i id="stop-share-button-icon"
+            class="fas fa-eye-slash"></i></button>
+        <button class="view-button" id="share-file-button"><i class="far fa-file-alt"></i></button>
+      </div>
+    </div>
+  </div>
+  <div id="start">
+    <input id="code-input" placeholder="Enter your code" />
+    <button id="start-button" disabled>Start Video Chat</button>
+  </div>
+</body>
+
+<div id="select-file-dialog" style="display: none;">
+  <div id="dialog-content">
+    <div id="select-file">
+      <div id="label">Select a file:</div>
+      <input type="file" id="select-file-input">
+    </div>
+    <div id="dialog-footer">
+      <button id="ok-button" disabled>Ok</button>
+      <button id="cancel-button" class="cancel-button">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="index.js"></script>
+
+</html>
